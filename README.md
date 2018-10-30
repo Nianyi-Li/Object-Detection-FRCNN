@@ -33,3 +33,5 @@
     ```
 2. Install Tensorflow object detection API as described in the installation section of
 [object_detection](https://github.com/tensorflow/models/tree/master/research/object_detection)
+
+   The API folder: `/home/nianyi/venv/lib/python3.5/site-packages/tensorflow/models/research`
