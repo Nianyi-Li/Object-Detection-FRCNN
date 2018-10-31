@@ -50,6 +50,8 @@
    pip install ipykernel
    # Install a new kernel:
    ipython kernel install --user --name=projectname
+   # Open Jupyter in the projectfolder:
+   jupyter notebook
    ```
    tl;dr
    ```
@@ -57,5 +59,8 @@
    $ source projectname/bin/activate
    (venv) $ pip install ipykernel
    (venv) $ ipython kernel install --user --name=projectname
+   (venv) $ jupyter notebook
    ```
+   To terminate `Jupyter`, you need do it from the website. Simply close the tab cannot terminate the project.
+   
    
