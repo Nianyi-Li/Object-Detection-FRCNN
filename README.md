@@ -40,6 +40,22 @@
    You can add the following line to your virtualenv's bin/activate file:
    `export PYTHONPATH="/the/path/you/want"`
    
-   To open jupter in `virtualenv`:
+   To open `jupyter` in [`virtualenv`](https://anbasile.github.io/programming/2017/06/25/jupyter-venv/):
+   ```
+   # Inside this folder create a new virtual environment:
+   python -m venv projectname
+   # Then activate it:
+   source projectname/bin/activate
+   # (Can Skip) From inside the environment install ipykernel using 'pip':
+   pip install ipykernel
+   # Install a new kernel:
+   ipython kernel install --user --name=projectname
+   ```
+   tl;dr
+   ```
+   $ python -m venv projectname
+   $ source projectname/bin/activate
+   (venv) $ pip install ipykernel
+   (venv) $ ipython kernel install --user --name=projectname
    ```
    
