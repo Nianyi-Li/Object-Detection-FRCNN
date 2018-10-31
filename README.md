@@ -35,3 +35,11 @@
 [object_detection](https://github.com/tensorflow/models/tree/master/research/object_detection)
 
    The API folder: `/home/nianyi/venv/lib/python3.5/site-packages/tensorflow/models/research`
+   
+   Add `PYTHONPATH` to `virtualenv` environment:
+   You can add the following line to your virtualenv's bin/activate file:
+   `export PYTHONPATH="/the/path/you/want"`
+   
+   To open jupter in `virtualenv`:
+   ```
+   
