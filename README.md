@@ -12,7 +12,7 @@
     # For GPU
      (venv) $ pip install tensorflow-gpu == 1.9.0
     ```
-    - Activate `virtualenv`: `(venv) $ source ./venv/bin/activate`
+    - Activate `virtualenv`: `$ source ./venv/bin/activate`
     
     - Deactivate `virtualenv`: `(venv) $ deactivate`
     
@@ -34,7 +34,7 @@
 2. Install Tensorflow object detection API as described in the installation section of
 [object_detection](https://github.com/tensorflow/models/tree/master/research/object_detection)
 
-   The API folder: `/home/nianyi/venv/lib/python3.5/site-packages/tensorflow/models/research`
+   The API folder: `/home/nianyi/models/research`
    
    Add `PYTHONPATH` to `virtualenv` environment:
    You can add the following line to your virtualenv's bin/activate file:
@@ -62,5 +62,14 @@
    (venv) $ jupyter notebook
    ```
    To terminate `Jupyter`, you need do it from the website. Simply close the tab cannot terminate the project.
+   
+### Data Cleaning   
+
+1. Convert images to `png`
+2. Image size issues:
+   Q1: [Do I need to resize the images into the same size?](https://stackoverflow.com/questions/39334226/what-should-be-appropriate-image-size-input-to-faster-rcnn-caffe-model)
+   A: Yes.
+   
+3. 
    
    
