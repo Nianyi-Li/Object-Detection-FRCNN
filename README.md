@@ -75,3 +75,6 @@
    - Crop and Pad images to the same size: `CropIm_GT.m`
    - Generate training, testing and validation set: `Generate_Train_Val_Test.m`
    
+4. Transform images and labels into `record` format:
+   - `Data_preprocessing_v0.py`: `python Data_preprocessing_v0.py train` and the output should be `train.record`
+   
