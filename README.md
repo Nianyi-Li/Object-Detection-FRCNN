@@ -81,7 +81,7 @@
 ### Train
 1. Change dir to `/home/nianyi/models/research/object_detection` and run:
     ```
-    python train.py --gpu 0 \
+    python legacy/train.py --gpu 0 \
     --pipeline_config_path /home/nianyi/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco.config \
     --train_dir /home/nianyi/Documents/Object-Detection/BBox/detection/train/
     ```
