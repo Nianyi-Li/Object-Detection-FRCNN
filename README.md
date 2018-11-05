@@ -34,8 +34,8 @@
 2. Install Tensorflow object detection API as described in the installation section of
 [object_detection](https://github.com/tensorflow/models/tree/master/research/object_detection)
 
-   -The API folder: `/home/nianyi/models/research`
-   -The project folder : `/home/nianyi/Documents/Object-Detection/BBox`
+   - The API folder: `/home/nianyi/models/research`
+   - The project folder : `/home/nianyi/Documents/Object-Detection/BBox`
    
    Add `PYTHONPATH` to `virtualenv` environment:
    You can add the following line to your virtualenv's bin/activate file:
