@@ -71,6 +71,7 @@
    Q1: [Do I need to resize the images into the same size?](https://stackoverflow.com/questions/39334226/what-should-be-appropriate-image-size-input-to-faster-rcnn-caffe-model)
    A: Yes.
    
-3. 
+3. Crop Images and transfer the original labels to the new image size:
+   - Crop and Pad images to the same size: `CropIm_GT.m`
    
    
