@@ -73,5 +73,5 @@
    
 3. Crop Images and transfer the original labels to the new image size:
    - Crop and Pad images to the same size: `CropIm_GT.m`
-   
+   - Generate training, testing and validation set: `Generate_Train_Val_Test.m`
    
