@@ -64,6 +64,12 @@
    ```
    To terminate `Jupyter`, you need do it from the website. Simply close the tab cannot terminate the project.
    
+### SSH
+To connect the server, you need to do 
+```
+ssh yournetID@lucia.duhs.duke.edu
+```
+   
 ### Data Cleaning   
 
 1. Convert images to `png`
