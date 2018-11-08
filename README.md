@@ -69,6 +69,11 @@ To connect the server, you need to do
 ```
 ssh yournetID@lucia.duhs.duke.edu
 ```
+
+### Run Docker
+```
+docker run --rm --runtime=nvidia -it -v ./:/workspace -v /home/nianyi/:/myhome -v /media/Data:/data detection bash
+```
    
 ### Data Cleaning   
 
