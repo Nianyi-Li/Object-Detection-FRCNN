@@ -71,35 +71,46 @@ ssh yournetID@lucia.duhs.duke.edu
 ```
 
 ### Docker
-- Go the project folder and run
-`docker build -t detection .`
+1. Install [TensorFlow image](https://www.tensorflow.org/install/docker)
+    
+    - Download TensorFlow Docker Image 
 
-- Run Docker
-```
-docker run --rm --runtime=nvidia -it -v `pwd`:/workspace -v /home/nianyi:/home/nianyi -v detection bash
-```
-- Close Docker
-Press `Ctrl + D`
+    `$ docker pull tensorflow/tensorflow:latest-devel-gpu-py3 `
+    
+    - Start a TensorFlow-configured container:
+    
+    `$ sudo docker run --runtime=nvidia -it tensorflow/tensorflow:latest-devel-gpu-py3 bash`
+    
+2. Install through Dockerfile
+    - Go the project folder and run
+    `docker build -t detection .`
 
-- Purging All Unused or Dangling Images, Containers, Volumes, and Networks
-`$ docker system prune`
+    - Run Docker
+    ```
+    docker run --rm --runtime=nvidia -it -v `pwd`:/workspace -v /home/nianyi:/home/nianyi -v detection bash
+    ```
+    - Close Docker
+    Press `Ctrl + D`
 
-To additionally remove any stopped containers and all unused images (not just dangling images), add the -a flag to the command:
+    - Purging All Unused or Dangling Images, Containers, Volumes, and Networks
+    `$ docker system prune`
 
-`$ docker system prune -a`
+    To additionally remove any stopped containers and all unused images (not just dangling images), add the -a flag to the command:
 
-- Removing Docker Images
+    `$ docker system prune -a`
 
-Remove one or more specific images
-Use the docker images command with the -a flag to locate the ID of the images you want to remove. This will show you every image, including intermediate image layers. When you've located the images you want to delete, you can pass their ID or tag to docker rmi:
+    - Removing Docker Images
 
-List:
+    Remove one or more specific images
+    Use the docker images command with the -a flag to locate the ID of the images you want to remove. This will show you every image, including intermediate image layers. When you've located the images you want to delete, you can pass their ID or tag to docker rmi:
 
-`$ docker images -a`
+    List:
 
-Remove:
+    `$ docker images -a`
 
-`$ docker rmi Image Image`
+    Remove:
+
+    `$ docker rmi Image Image`
    
 ### Data Cleaning   
 
