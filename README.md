@@ -70,10 +70,35 @@ To connect the server, you need to do
 ssh yournetID@lucia.duhs.duke.edu
 ```
 
-### Run Docker
+### Docker
+- Go the project folder and run
+`docker build -t detection .`
+
+- Run Docker
 ```
-docker run --rm --runtime=nvidia -it -v ./:/workspace -v /home/nianyi/:/home/nianyi -v /media/Data:/media/Data detection bash
+docker run --rm --runtime=nvidia -it -v :/workspace -v /home/nianyi:/home/nianyi -v /media/Data:/media/Data detection bash
 ```
+
+- Close Docker
+Press `Ctrl + D`
+
+- Purging All Unused or Dangling Images, Containers, Volumes, and Networks
+`$ docker system prune`
+
+To additionally remove any stopped containers and all unused images (not just dangling images), add the -a flag to the command:
+
+`$ docker system prune -a`
+
+- Removing Docker Images
+Remove one or more specific images
+Use the docker images command with the -a flag to locate the ID of the images you want to remove. This will show you every image, including intermediate image layers. When you've located the images you want to delete, you can pass their ID or tag to docker rmi:
+
+List:
+
+`$ docker images -a`
+Remove:
+
+`$ docker rmi Image Image`
    
 ### Data Cleaning   
 
