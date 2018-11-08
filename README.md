@@ -151,5 +151,7 @@ ssh yournetID@lucia.duhs.duke.edu
     else:
         print("Please install GPU version of TF")
     ```
+    Or, just using `tf.test.gpu_device_name()`
 
+4. `Ctrl + D` to exit the docker or python
    
