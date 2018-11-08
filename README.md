@@ -101,16 +101,16 @@ ssh yournetID@lucia.duhs.duke.edu
 
     - Removing Docker Images
 
-    Remove one or more specific images
-    Use the docker images command with the -a flag to locate the ID of the images you want to remove. This will show you every image, including intermediate image layers. When you've located the images you want to delete, you can pass their ID or tag to docker rmi:
+        - Remove one or more specific images
+         Use the docker images command with the -a flag to locate the ID of the images you want to remove. This will show you every image, including intermediate image layers. When you've located the images you want to delete, you can pass their ID or tag to docker rmi:
 
-    List:
+        - List:
 
-    `$ docker images -a`
+            `$ docker images -a`
 
-    Remove:
+        - Remove:
 
-    `$ docker rmi Image Image`
+            `$ docker rmi Image Image`
    
 ### Data Cleaning   
 
