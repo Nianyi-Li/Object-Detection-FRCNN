@@ -87,7 +87,7 @@ ssh yournetID@lucia.duhs.duke.edu
 
     - Run Docker
     ```
-    docker run --rm --runtime=nvidia -it -v `pwd`:/workspace -v /home/nianyi:/home/nianyi -v detection bash
+    docker run --rm --runtime=nvidia -it -v `pwd`:/workspace -v /home/nianyi:/home/nianyi -v /media/Data:/media/Data detection bash
     ```
     - Close Docker
     Press `Ctrl + D`
