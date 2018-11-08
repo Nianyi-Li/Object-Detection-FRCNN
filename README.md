@@ -154,4 +154,10 @@ ssh yournetID@lucia.duhs.duke.edu
     Or, just using `tf.test.gpu_device_name()`
 
 4. `Ctrl + D` to exit the docker or python
+5. Change dir to `/tensorflow/models/research/object_detection` and run:
+    ```
+    python3 legacy/train.py --gpu 0 \
+    --pipeline_config_path /home/nianyi/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco.config \
+    --train_dir /home/nianyi/Documents/Object-Detection/BBox/detection/train/
+    ```
    
