@@ -133,4 +133,16 @@ ssh yournetID@lucia.duhs.duke.edu
     --pipeline_config_path /home/nianyi/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco.config \
     --train_dir /home/nianyi/Documents/Object-Detection/BBox/detection/train/
     ```
+    
+### Train in Docker
+1. Change dir to project folder: 
+    ```
+    cd /Documents/Object-Detection
+    
+2. Run docker container:
+    ```
+     sudo  docker run --rm --runtime=nvidia -it -v `pwd`:/workspace -v /home/nianyi:/home/nianyi -v /media/Data:/media/Data detection bash
+     
+3.      
+
    
