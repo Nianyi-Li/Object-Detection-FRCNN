@@ -143,6 +143,13 @@ ssh yournetID@lucia.duhs.duke.edu
     ```
      sudo  docker run --rm --runtime=nvidia -it -v `pwd`:/workspace -v /home/nianyi:/home/nianyi -v /media/Data:/media/Data detection bash
      ```
-3.      
+3. Ensure that tensorflow is using GPU:
+    ```
+    import tensorflow as tf
+    if tf.test.gpu_device_name():
+        print('Default GPU Device: {}'.format(tf.test.gpu_device_name()))
+    else:
+        print("Please install GPU version of TF")
+    ```
 
    
