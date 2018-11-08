@@ -76,9 +76,8 @@ ssh yournetID@lucia.duhs.duke.edu
 
 - Run Docker
 ```
-docker run --rm --runtime=nvidia -it -v :/workspace -v /home/nianyi:/home/nianyi -v /media/Data:/media/Data detection bash
+docker run --rm --runtime=nvidia -it -v `pwd`:/workspace -v /home/nianyi:/home/nianyi -v detection bash
 ```
-
 - Close Docker
 Press `Ctrl + D`
 
@@ -90,12 +89,14 @@ To additionally remove any stopped containers and all unused images (not just da
 `$ docker system prune -a`
 
 - Removing Docker Images
+
 Remove one or more specific images
 Use the docker images command with the -a flag to locate the ID of the images you want to remove. This will show you every image, including intermediate image layers. When you've located the images you want to delete, you can pass their ID or tag to docker rmi:
 
 List:
 
 `$ docker images -a`
+
 Remove:
 
 `$ docker rmi Image Image`
