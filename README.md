@@ -71,6 +71,9 @@ ssh yournetID@lucia.duhs.duke.edu
 ```
 
 ### Docker
+0. Install Docker-nvidia in Ubuntu
+    - check the [procedure](https://blog.csdn.net/chxw098/article/details/79741586)
+    - check the [procedure](https://chunml.github.io/ChunML.github.io/project/Installing-NVIDIA-Docker-On-Ubuntu-16.04/)
 1. Install [TensorFlow image](https://www.tensorflow.org/install/docker)
     
     - Download TensorFlow Docker Image 
