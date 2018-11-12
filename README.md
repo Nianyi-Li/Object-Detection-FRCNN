@@ -133,7 +133,7 @@ ssh yournetID@lucia.duhs.duke.edu
 1. Change dir to `/home/nianyi/models/research/object_detection` and run:
     ```
     python legacy/train.py --gpu 0 \
-    --pipeline_config_path /home/nianyi/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco.config \
+    --pipeline_config_path /home/maciej/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco.config \
     --train_dir /home/nianyi/Documents/Object-Detection/BBox/detection/train/
     ```
     
@@ -144,7 +144,7 @@ ssh yournetID@lucia.duhs.duke.edu
     ```
 2. Run docker container:
     ```
-     sudo  docker run --rm --runtime=nvidia -it -v `pwd`:/workspace -v /home/maciej:/home/maciej detection bash
+     sudo  docker run --rm --runtime=nvidia -it -v /home/maciej/Documents/Object-Detection:/workspace -v /home/maciej:/home/maciej detection bash
      ```
 3. Ensure that tensorflow is using GPU:
     ```
@@ -159,16 +159,23 @@ ssh yournetID@lucia.duhs.duke.edu
 4. `Ctrl + D` to exit the docker or python
 5. Change dir to `/tensorflow/models/research/object_detection` and run:
     ```
-    python legacy/train.py --gpu 0 \
+    python legacy/train.py --gpu 1 \
     --pipeline_config_path /home/maciej/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco.config \
     --train_dir /home/maciej/Documents/Object-Detection/BBox/detection/train/
     ```
     
  6. Cross Evaluation
     ```
-    python legacy/eval.py --gpu 1 \
-        --checkpoint_dir /workspace/BBox/detection/train/ \
-        --eval_dir /workspace/BBox/detection/eval/ \
-        --pipeline_config_path /workspace/BBox/detection/faster_rcnn_resnet101_coco.config
+    python legacy/eval.py --gpu 0 \
+        --checkpoint_dir /home/maciej/Documents/Object-Detection/BBox/detection/train/ \
+        --eval_dir /home/maciej/Documents/Object-Detection/BBox/detection/eval/ \
+        --pipeline_config_path /home/maciej/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco.config
     ```
+    Or
+    ```
+        python legacy/eval.py --checkpoint_dir /home/maciej/Documents/Object-Detection/BBox/detection/train/ \
+        --eval_dir /home/maciej/Documents/Object-Detection/BBox/detection/eval/ \
+        --pipeline_config_path /home/maciej/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco.config
+    ```
+    
    
