@@ -91,7 +91,7 @@ ssh yournetID@lucia.duhs.duke.edu
     - Run Docker
     ```
     docker run --rm --runtime=nvidia -it -v `pwd`:/workspace -v /home/nianyi:/home/nianyi -v /media/Data:/media/Data detection bash
-    ```
+    ``` 
     - Close Docker
     Press `Ctrl + D`
 
@@ -144,7 +144,7 @@ ssh yournetID@lucia.duhs.duke.edu
     ```
 2. Run docker container:
     ```
-     sudo  docker run --rm --runtime=nvidia -it -v `pwd`:/workspace -v /home/nianyi:/home/nianyi -v /media/Data:/media/Data detection bash
+     sudo  docker run --rm --runtime=nvidia -it -v `pwd`:/workspace -v /home/maciej:/home/maciej detection bash
      ```
 3. Ensure that tensorflow is using GPU:
     ```
@@ -159,8 +159,16 @@ ssh yournetID@lucia.duhs.duke.edu
 4. `Ctrl + D` to exit the docker or python
 5. Change dir to `/tensorflow/models/research/object_detection` and run:
     ```
-    python3 legacy/train.py --gpu 0 \
-    --pipeline_config_path /home/nianyi/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco.config \
-    --train_dir /home/nianyi/Documents/Object-Detection/BBox/detection/train/
+    python legacy/train.py --gpu 0 \
+    --pipeline_config_path /home/maciej/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco.config \
+    --train_dir /home/maciej/Documents/Object-Detection/BBox/detection/train/
+    ```
+    
+ 6. Cross Evaluation
+    ```
+    python legacy/eval.py --gpu 1 \
+        --checkpoint_dir /workspace/BBox/detection/train/ \
+        --eval_dir /workspace/BBox/detection/eval/ \
+        --pipeline_config_path /workspace/BBox/detection/faster_rcnn_resnet101_coco.config
     ```
    
