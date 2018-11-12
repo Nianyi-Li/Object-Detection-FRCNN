@@ -166,7 +166,7 @@ ssh yournetID@lucia.duhs.duke.edu
     
  6. Cross Evaluation
     ```
-    python legacy/eval.py --gpu 0 \
+    python /tensorflow/models/research/object_detection/legacy/eval.py --gpu 0 \
         --checkpoint_dir /home/maciej/Documents/Object-Detection/BBox/detection/train/ \
         --eval_dir /home/maciej/Documents/Object-Detection/BBox/detection/eval/ \
         --pipeline_config_path /home/maciej/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco.config
@@ -176,6 +176,11 @@ ssh yournetID@lucia.duhs.duke.edu
         python legacy/eval.py --checkpoint_dir /home/maciej/Documents/Object-Detection/BBox/detection/train/ \
         --eval_dir /home/maciej/Documents/Object-Detection/BBox/detection/eval/ \
         --pipeline_config_path /home/maciej/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco.config
+    ```
+    
+  7. Tensorboard
+    ```
+    tensorboard --logdir=/home/maciej/Documents/Object-Detection/BBox/detection/train/
     ```
     
    
