@@ -183,4 +183,5 @@ ssh yournetID@lucia.duhs.duke.edu
     tensorboard --logdir=/home/maciej/Documents/Object-Detection/BBox/detection/train/
     ```
     
+  8. Generate `pb` file   
    
