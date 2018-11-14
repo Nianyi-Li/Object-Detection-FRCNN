@@ -180,7 +180,7 @@ ssh yournetID@lucia.duhs.duke.edu
     
   7. Tensorboard
         ```
-        tensorboard --logdir=/home/maciej/Documents/Object-Detection/BBox/detection/train/
+        tensorboard --logdir=/home/maciej/Documents/Object-Detection/BBox/detection/eval/
         ```
     
   8. Generate [`pb`](https://blog.csdn.net/qq_34106574/article/details/80151574) file   
