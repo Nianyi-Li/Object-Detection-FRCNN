@@ -146,6 +146,11 @@ ssh yournetID@lucia.duhs.duke.edu
     ```
      sudo  docker run --rm --runtime=nvidia -it -v /home/maciej/Documents/Object-Detection:/workspace -v /home/maciej:/home/maciej detection bash
      ```
+   To enabel `jupyter notebook` in docker image, run:
+    ```
+     sudo  docker run --rm --runtime=nvidia -p 10000:10000 -it -v /home/maciej/Documents/Object-Detection:/workspace -v /home/maciej:/home/maciej detection bash
+     ```  
+   Note that, `-p 10000:10000` set the port to `10000`. Generally, people use `8888:8888` as the default setting.
 3. Ensure that tensorflow is using GPU:
     ```
     import tensorflow as tf
@@ -186,7 +191,11 @@ ssh yournetID@lucia.duhs.duke.edu
         --trained_checkpoint_prefix /home/maciej/Documents/Object-Detection/BBox/detection/train/model.ckpt-4408 \
         --output_directory /home/maciej/Documents/Object-Detection/BBox/detection/inference/
      ```
-  - 
+  - Run inference in `jupyter`
+    ```
+    jupyter notebook --ip 0.0.0.0 --port 10000 --no-browser --allow-root
+    ```
+    Note that, to access Jupyter notebook running on Docker container, you need to run your notebook on `0.0.0.0`
     
   8. Tensorboard
         ```
