@@ -179,17 +179,19 @@ ssh yournetID@lucia.duhs.duke.edu
     ```
     
   7. Export inference model
+  - Generate [`pb`](https://blog.csdn.net/qq_34106574/article/details/80151574) file  
      ```
      python /tensorflow/models/research/object_detection/export_inference_graph.py --input_type image_tensor \
         --pipeline_config_path /home/maciej/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco.config \
         --trained_checkpoint_prefix /home/maciej/Documents/Object-Detection/BBox/detection/train/model.ckpt-4408 \
         --output_directory /home/maciej/Documents/Object-Detection/BBox/detection/inference/
      ```
+  - 
     
   8. Tensorboard
         ```
         tensorboard --logdir=/home/maciej/Documents/Object-Detection/BBox/detection/eval/
         ```
     
-  9. Generate [`pb`](https://blog.csdn.net/qq_34106574/article/details/80151574) file   
+  9.  
    
