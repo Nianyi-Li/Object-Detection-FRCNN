@@ -172,6 +172,12 @@ ssh yournetID@lucia.duhs.duke.edu
     --pipeline_config_path /home/maciej/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco.config \
     --train_dir /home/maciej/Documents/Object-Detection/BBox/detection/train/
     ```
+    Or
+    ```
+    python /tensorflow/models/research/object_detection/legacy/train.py --gpu 1 \
+    --pipeline_config_path /home/maciej/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco.config \
+    --train_dir /home/maciej/Documents/Object-Detection/BBox/detection/train/
+    ```    
     
  6. Cross Evaluation
     ```
