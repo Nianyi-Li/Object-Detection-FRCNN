@@ -177,29 +177,35 @@ ssh yournetID@lucia.duhs.duke.edu
     python /tensorflow/models/research/object_detection/legacy/train.py --gpu 1 \
     --pipeline_config_path /home/maciej/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco.config \
     --train_dir /home/maciej/Documents/Object-Detection/BBox/detection/train/
-    ```    
+    ```   
+    Or
+    ```
+    python /tensorflow/models/research/object_detection/legacy/train.py --gpu 1 \
+    --pipeline_config_path /home/maciej/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco_V1.config \
+    --train_dir /home/maciej/Documents/Object-Detection/BBox/detection/train_V1/
+    ```      
     
  6. Cross Evaluation
     ```
     python /tensorflow/models/research/object_detection/legacy/eval.py --gpu 0 \
-        --checkpoint_dir /home/maciej/Documents/Object-Detection/BBox/detection/train/ \
-        --eval_dir /home/maciej/Documents/Object-Detection/BBox/detection/eval/ \
-        --pipeline_config_path /home/maciej/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco.config
+        --checkpoint_dir /home/maciej/Documents/Object-Detection/BBox/detection/train_V1/ \
+        --eval_dir /home/maciej/Documents/Object-Detection/BBox/detection/eval_V1/ \
+        --pipeline_config_path /home/maciej/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco_V1.config
     ```
     Or
     ```
-        python legacy/eval.py --checkpoint_dir /home/maciej/Documents/Object-Detection/BBox/detection/train/ \
-        --eval_dir /home/maciej/Documents/Object-Detection/BBox/detection/eval/ \
-        --pipeline_config_path /home/maciej/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco.config
+        python legacy/eval.py --checkpoint_dir /home/maciej/Documents/Object-Detection/BBox/detection/train_V1/ \
+        --eval_dir /home/maciej/Documents/Object-Detection/BBox/detection/eval_V1/ \
+        --pipeline_config_path /home/maciej/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco_V1.config
     ```
     
   7. Export inference model
   - Generate [`pb`](https://blog.csdn.net/qq_34106574/article/details/80151574) file  
      ```
      python /tensorflow/models/research/object_detection/export_inference_graph.py --input_type image_tensor \
-        --pipeline_config_path /home/maciej/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco.config \
-        --trained_checkpoint_prefix /home/maciej/Documents/Object-Detection/BBox/detection/train/model.ckpt-4408 \
-        --output_directory /home/maciej/Documents/Object-Detection/BBox/detection/inference/
+        --pipeline_config_path /home/maciej/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco_V1.config \
+        --trained_checkpoint_prefix /home/maciej/Documents/Object-Detection/BBox/detection/train_V1/model.ckpt-17876 \
+        --output_directory /home/maciej/Documents/Object-Detection/BBox/detection/inference_V1/
      ```
   - In the `ipynb` folder, run inference in `jupyter`
     ```
