@@ -224,5 +224,9 @@ ssh yournetID@lucia.duhs.duke.edu
         tensorboard --logdir=/home/maciej/Documents/Object-Detection/BBox/detection/eval/
         ```
     
-  9.  
+  9.  Inference
+  - In the `detection` folder, run 
+    ```
+    python inference_v1.py
+    ```
    
