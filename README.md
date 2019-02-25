@@ -128,6 +128,7 @@ ssh yournetID@lucia.duhs.duke.edu
    
 4. Transform images and labels into `record` format:
    - `Data_preprocessing_v0.py`: `python Data_preprocessing_v0.py train` and the output should be `train.record`
+   - `python Data_preprocessing_v2.py train_v2`
 
 ### Train
 1. Change dir to `/home/nianyi/models/research/object_detection` and run:
@@ -189,7 +190,13 @@ ssh yournetID@lucia.duhs.duke.edu
     python /tensorflow/models/research/object_detection/legacy/train.py --gpu 1 \
     --pipeline_config_path /home/maciej/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco_V1.config \
     --train_dir /home/maciej/Documents/Object-Detection/BBox/detection/train_V1/
-    ```      
+    ``` 
+    Or
+    ```
+    python /tensorflow/models/research/object_detection/legacy/train.py --gpu 1 \
+    --pipeline_config_path /workspace/BBox/detection/faster_rcnn_resnet101_coco_V2.config \
+    --train_dir /workspace/BBox/detection/train_V2/
+    ```   
     
  6. Cross Evaluation
     ```
