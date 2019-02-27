@@ -211,6 +211,13 @@ ssh yournetID@lucia.duhs.duke.edu
         --eval_dir /home/maciej/Documents/Object-Detection/BBox/detection/eval_V1/ \
         --pipeline_config_path /home/maciej/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco_V1.config
     ```
+    Or
+    ```
+    python /tensorflow/models/research/object_detection/legacy/eval.py --gpu 0 \
+        --checkpoint_dir /workspace/BBox/detection/train_V2/ \
+        --eval_dir /workspace/BBox/detection/eval_V2/ \
+        --pipeline_config_path /workspace/BBox/detection/faster_rcnn_resnet101_coco_V2.config
+    ```
     
   7. Export inference model
   - Generate [`pb`](https://blog.csdn.net/qq_34106574/article/details/80151574) file  
