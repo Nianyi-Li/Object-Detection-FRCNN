@@ -227,6 +227,13 @@ ssh yournetID@lucia.duhs.duke.edu
         --trained_checkpoint_prefix /home/maciej/Documents/Object-Detection/BBox/detection/train_V1/model.ckpt-17876 \
         --output_directory /home/maciej/Documents/Object-Detection/BBox/detection/inference_V1/
      ```
+     Or
+     ```
+     python /tensorflow/models/research/object_detection/export_inference_graph.py --input_type image_tensor \
+        --pipeline_config_path /workspace/BBox/detection/faster_rcnn_resnet101_coco_V2.config \
+        --trained_checkpoint_prefix /workspace/BBox/detection/train_V2/model.ckpt-20000 \
+        --output_directory /workspace/BBox/detection/inference_V2/
+     ```
   - In the `ipynb` folder, run inference in `jupyter`
     ```
     jupyter notebook --ip 0.0.0.0 --port 10000 --no-browser --allow-root
@@ -242,5 +249,9 @@ ssh yournetID@lucia.duhs.duke.edu
   - In the `detection` folder, run 
     ```
     python inference_v1.py
+    ```
+    Or
+    ```
+    python inference_v2.py
     ```
    
