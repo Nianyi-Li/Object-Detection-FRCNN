@@ -155,6 +155,7 @@ ssh yournetID@lucia.duhs.duke.edu
    ```
    sudo  docker run --rm --runtime=nvidia -p 10000:10000 -it \
         -v /media/maciej/Nianyi/Object-Detection:/workspace \
+        -v /media/maciej/Data_Ami_1T/MOST_dataset/dataset:/data \
         -v /home/maciej:/home/maciej detection bash
    ```   
    Or 
