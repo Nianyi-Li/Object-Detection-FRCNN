@@ -158,6 +158,13 @@ ssh yournetID@lucia.duhs.duke.edu
         -v /media/maciej/Nianyi/Classification/Data:/data \
         -v /home/maciej:/home/maciej detection bash
    ```   
+   Or
+   ```
+   sudo  docker run --rm --runtime=nvidia -p 10000:10000 -it \
+        -v /home/nianyi/Documents/Object-Detection:/workspace \
+        -v /media/nianyi/Data_Ami_1T/MOST_dataset/dataset:/data \
+        -v /home/nianyi:/home/nianyi detection bash
+   ```  
    Or 
    ```
    sudo  docker run --rm --runtime=nvidia -p 8888:8888 -it -v /home/maciej/Documents/Object-Detection:/workspace -v /home/maciej:/home/maciej detection bash
