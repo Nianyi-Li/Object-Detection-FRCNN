@@ -226,6 +226,15 @@ ssh yournetID@lucia.duhs.duke.edu
         --eval_dir /home/maciej/Documents/Object-Detection/BBox/detection/eval_V1/ \
         --pipeline_config_path /home/maciej/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco_V1.config
     ```
+    
+    Or
+    ```
+    python /tensorflow/models/research/object_detection/legacy/eval.py --gpu 0 \
+        --checkpoint_dir /home/nianyi/Documents/Object-Detection/BBox/detection/train_V1/ \
+        --eval_dir /home/nianyi/Documents/Object-Detection/BBox/detection/eval_V1/ \
+        --pipeline_config_path /home/nianyi/Documents/Object-Detection/BBox/detection/faster_rcnn_resnet101_coco_V1.config
+    ```
+    
     Or
     ```
     python /tensorflow/models/research/object_detection/legacy/eval.py --gpu 0 \
